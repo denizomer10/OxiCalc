@@ -11,15 +11,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 mipmap ic_launcher
 mipmap ic_launcher_round
-string action_go
 string app_name
-string baking_title
-string image1_description
-string image2_description
-string image3_description
-string label_prompt
-string prompt_placeholder
-string results_placeholder
 style Theme.MyApplication
 xml backup_rules
 xml data_extraction_rules

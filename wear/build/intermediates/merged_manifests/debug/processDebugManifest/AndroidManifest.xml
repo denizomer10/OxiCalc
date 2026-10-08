@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="25"
-        android:targetSdkVersion="35" />
+        android:targetSdkVersion="36" />
 
     <uses-feature android:name="android.hardware.type.watch" />
 

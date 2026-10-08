@@ -1,12 +1,11 @@
 plugins {
-    alias(libs.plugins.android.application) apply false
     id("com.android.library")
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "com.oxi.calc.shared"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 25

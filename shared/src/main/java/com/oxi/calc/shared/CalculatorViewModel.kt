@@ -12,11 +12,13 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
 import java.math.BigDecimal
 import java.math.MathContext
 import java.math.RoundingMode
+import java.util.Locale
 import java.util.UUID
 import kotlin.math.*
 
@@ -33,6 +35,9 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
     var isDarkMode by mutableStateOf(true)
     
     private val prefs = application.getSharedPreferences("oxi_calc_prefs", Context.MODE_PRIVATE)
+
+    // Resolved once instead of hitting resources on every key press.
+    private val errorString: String by lazy { application.getString(R.string.error) }
     private val _calculationHistory = mutableStateListOf<HistoryItem>()
     val calculationHistory: List<HistoryItem> = _calculationHistory
     
@@ -57,7 +62,7 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
 
     fun onDigitClick(digit: String) {
         val currentText = textFieldValue.text
-        val errorStr = getApplication<Application>().getString(R.string.error)
+        val errorStr = errorString
         
         if (currentText == errorStr || currentText == "NaN" || currentText == "Infinity") {
             updateText("0")
@@ -114,7 +119,7 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
                 firstOperand = result
                 updateText(formatResult(result))
             } catch (e: Exception) {
-                updateText(getApplication<Application>().getString(R.string.error))
+                updateText(errorString)
                 firstOperand = null
                 pendingOperation = null
                 return
@@ -131,7 +136,7 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     fun onEqualClick() {
-        val errorStr = getApplication<Application>().getString(R.string.error)
+        val errorStr = errorString
         if (textFieldValue.text == errorStr) return
         val currentValue = safeToBigDecimal(textFieldValue.text) ?: return
         
@@ -163,7 +168,7 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
                 shouldResetDisplay = true
             }
         } catch (e: Exception) {
-            updateText(getApplication<Application>().getString(R.string.error))
+            updateText(errorString)
             shouldResetDisplay = true
         }
     }
@@ -179,7 +184,7 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     fun onDeleteClick() {
-        val errorStr = getApplication<Application>().getString(R.string.error)
+        val errorStr = errorString
         if (shouldResetDisplay || textFieldValue.text == errorStr) return
         val text = textFieldValue.text
         val selection = textFieldValue.selection
@@ -205,7 +210,7 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
 
     fun onNegateClick() {
         val text = textFieldValue.text
-        val errorStr = getApplication<Application>().getString(R.string.error)
+        val errorStr = errorString
         if (text == "0" || text == errorStr || text.isEmpty()) return
         if (text.startsWith("-")) {
             updateText(text.substring(1))
@@ -236,7 +241,7 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
         }
         
         if (result.isNaN() || result.isInfinite()) {
-            updateText(getApplication<Application>().getString(R.string.error))
+            updateText(errorString)
         } else {
             val bigResult = BigDecimal.valueOf(result).round(precisionContext)
             val resultStr = formatResult(bigResult)
@@ -291,15 +296,23 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
 
     private fun loadHistory() {
         val jsonStr = prefs.getString("history_json", null) ?: return
-        try {
-            val jsonArray = JSONArray(jsonStr)
-            _calculationHistory.clear()
-            for (i in 0 until jsonArray.length()) {
-                val obj = jsonArray.getJSONObject(i)
-                _calculationHistory.add(HistoryItem(expression = obj.getString("exp"), result = obj.getString("res")))
+        // Parse off the main thread, then publish on the main thread (snapshot state).
+        viewModelScope.launch {
+            val items = withContext(Dispatchers.IO) {
+                try {
+                    val jsonArray = JSONArray(jsonStr)
+                    (0 until jsonArray.length()).map {
+                        val obj = jsonArray.getJSONObject(it)
+                        HistoryItem(expression = obj.getString("exp"), result = obj.getString("res"))
+                    }
+                } catch (e: Exception) {
+                    emptyList()
+                }
             }
-        } catch (e: Exception) {
-            // Corruption handled
+            if (items.isNotEmpty()) {
+                _calculationHistory.clear()
+                _calculationHistory.addAll(items)
+            }
         }
     }
 
@@ -326,7 +339,7 @@ class CalculatorViewModel(application: Application) : AndroidViewModel(applicati
         return when {
             plain.contains("E") -> plain
             plain.length > 15 || (stripped.abs() < BigDecimal("0.00000001") && stripped.signum() != 0) -> {
-                "%.10e".format(result.toDouble()).replace(",", ".")
+                String.format(Locale.US, "%.10e", result.toDouble())
             }
             else -> plain
         }

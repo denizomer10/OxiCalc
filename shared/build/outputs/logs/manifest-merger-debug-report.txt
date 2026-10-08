@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml:2:13-83
-INJECTED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml:2:13-83
+ADDED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml:2:13-83
+INJECTED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml:2:13-83
 	package
-		INJECTED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml
+		INJECTED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml
 	xmlns:android
-		ADDED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml:2:23-81
+		ADDED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml:2:23-81
 uses-sdk
-INJECTED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml reason: use-sdk injection requested
-INJECTED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml
-INJECTED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml
+INJECTED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml reason: use-sdk injection requested
+INJECTED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml
+INJECTED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml
 	android:targetSdkVersion
-		INJECTED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml
+		INJECTED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml
 	android:minSdkVersion
-		INJECTED from /Users/mac/Documents/AndroidStudioProjects/MyApplication/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest261132970326687286.xml
+		INJECTED from /home/pc/OxiCalc/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7359136750547967319.xml

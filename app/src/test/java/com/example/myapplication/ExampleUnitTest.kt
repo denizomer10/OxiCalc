@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.oxi.calc
 
 import org.junit.Test
 

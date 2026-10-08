@@ -4,7 +4,7 @@
             "outputFile": "com.oxi.calc.wear-mergeDebugResources-43:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/mac/.gradle/caches/9.4.1/transforms/23789facf60654ad7426125c671c8c1d/transformed/core-1.16.0/res/values-v21/values-v21.xml",
+                    "source": "/home/pc/.gradle/caches/9.4.1/transforms/cecdd07370bb5e8b3396faa27e6c96e9/transformed/core-1.16.0/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

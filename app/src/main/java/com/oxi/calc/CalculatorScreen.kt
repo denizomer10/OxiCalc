@@ -55,7 +55,7 @@ fun CalculatorScreen(viewModel: CalculatorViewModel = viewModel()) {
     val isDarkMode = viewModel.isDarkMode
 
     val density = LocalDensity.current
-    val isScientific by remember { derivedStateOf { viewModel.isScientificMode } }
+    val isScientific = viewModel.isScientificMode
     val historyItems = viewModel.calculationHistory
     
     Surface(

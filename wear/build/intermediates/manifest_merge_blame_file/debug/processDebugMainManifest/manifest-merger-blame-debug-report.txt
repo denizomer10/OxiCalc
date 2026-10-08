@@ -8,155 +8,155 @@
 7-->INJECTED
 8        android:minSdkVersion="25"
 8-->INJECTED
-9        android:targetSdkVersion="35" />
+9        android:targetSdkVersion="36" />
 9-->INJECTED
 10
 11    <uses-feature android:name="android.hardware.type.watch" />
-11-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:4:5-64
-11-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:4:19-61
+11-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:4:5-64
+11-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:4:19-61
 12
 13    <permission
-13-->[androidx.core:core:1.16.0] /Users/mac/.gradle/caches/9.4.1/transforms/23789facf60654ad7426125c671c8c1d/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+13-->[androidx.core:core:1.16.0] /home/pc/.gradle/caches/9.4.1/transforms/cecdd07370bb5e8b3396faa27e6c96e9/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
 14        android:name="com.oxi.calc.wear.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.16.0] /Users/mac/.gradle/caches/9.4.1/transforms/23789facf60654ad7426125c671c8c1d/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+14-->[androidx.core:core:1.16.0] /home/pc/.gradle/caches/9.4.1/transforms/cecdd07370bb5e8b3396faa27e6c96e9/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
 15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.16.0] /Users/mac/.gradle/caches/9.4.1/transforms/23789facf60654ad7426125c671c8c1d/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+15-->[androidx.core:core:1.16.0] /home/pc/.gradle/caches/9.4.1/transforms/cecdd07370bb5e8b3396faa27e6c96e9/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
 16
 17    <uses-permission android:name="com.oxi.calc.wear.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.16.0] /Users/mac/.gradle/caches/9.4.1/transforms/23789facf60654ad7426125c671c8c1d/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.16.0] /Users/mac/.gradle/caches/9.4.1/transforms/23789facf60654ad7426125c671c8c1d/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+17-->[androidx.core:core:1.16.0] /home/pc/.gradle/caches/9.4.1/transforms/cecdd07370bb5e8b3396faa27e6c96e9/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.16.0] /home/pc/.gradle/caches/9.4.1/transforms/cecdd07370bb5e8b3396faa27e6c96e9/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:6:5-28:19
+19-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:6:5-28:19
 20        android:allowBackup="true"
-20-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:7:9-35
+20-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:7:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.16.0] /Users/mac/.gradle/caches/9.4.1/transforms/23789facf60654ad7426125c671c8c1d/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+21-->[androidx.core:core:1.16.0] /home/pc/.gradle/caches/9.4.1/transforms/cecdd07370bb5e8b3396faa27e6c96e9/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
 22        android:debuggable="true"
 23        android:extractNativeLibs="false"
 23-->INJECTED
 24        android:icon="@mipmap/ic_launcher"
-24-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:8:9-43
+24-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:8:9-43
 25        android:label="@string/app_name"
-25-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:9:9-41
+25-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:9:9-41
 26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:10:9-54
+26-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:10:9-54
 27        android:supportsRtl="true"
-27-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:11:9-35
+27-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:11:9-35
 28        android:theme="@android:style/Theme.DeviceDefault" >
-28-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:12:9-59
+28-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:12:9-59
 29        <uses-library
-29-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:14:9-16:40
+29-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:14:9-16:40
 30            android:name="com.google.android.wearable"
-30-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:15:13-55
+30-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:15:13-55
 31            android:required="false" />
-31-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:16:13-37
+31-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:16:13-37
 32
 33        <activity
-33-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:18:9-27:20
+33-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:18:9-27:20
 34            android:name="com.oxi.calc.wear.WearMainActivity"
-34-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:19:13-45
+34-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:19:13-45
 35            android:exported="true"
-35-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:20:13-36
+35-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:20:13-36
 36            android:label="@string/app_name"
-36-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:21:13-45
+36-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:21:13-45
 37            android:theme="@android:style/Theme.DeviceDefault" >
-37-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:22:13-63
+37-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:22:13-63
 38            <intent-filter>
-38-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:23:13-26:29
+38-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:23:13-26:29
 39                <action android:name="android.intent.action.MAIN" />
-39-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:24:17-69
-39-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:24:25-66
+39-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:24:17-69
+39-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:24:25-66
 40
 41                <category android:name="android.intent.category.LAUNCHER" />
-41-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:25:17-77
-41-->/Users/mac/Documents/AndroidStudioProjects/MyApplication/wear/src/main/AndroidManifest.xml:25:27-74
+41-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:25:17-77
+41-->/home/pc/OxiCalc/wear/src/main/AndroidManifest.xml:25:27-74
 42            </intent-filter>
 43        </activity>
 44
 45        <uses-library
-45-->[androidx.wear.compose:compose-foundation:1.6.2] /Users/mac/.gradle/caches/9.4.1/transforms/5f003fbae2b237e68896d64e16aacac4/transformed/compose-foundation-1.6.2/AndroidManifest.xml:23:9-25:40
+45-->[androidx.wear.compose:compose-foundation:1.6.2] /home/pc/.gradle/caches/9.4.1/transforms/a59fc18c1cea5dbc10c797bea14c6b16/transformed/compose-foundation-1.6.2/AndroidManifest.xml:23:9-25:40
 46            android:name="wear-sdk"
-46-->[androidx.wear.compose:compose-foundation:1.6.2] /Users/mac/.gradle/caches/9.4.1/transforms/5f003fbae2b237e68896d64e16aacac4/transformed/compose-foundation-1.6.2/AndroidManifest.xml:24:13-36
+46-->[androidx.wear.compose:compose-foundation:1.6.2] /home/pc/.gradle/caches/9.4.1/transforms/a59fc18c1cea5dbc10c797bea14c6b16/transformed/compose-foundation-1.6.2/AndroidManifest.xml:24:13-36
 47            android:required="false" />
-47-->[androidx.wear.compose:compose-foundation:1.6.2] /Users/mac/.gradle/caches/9.4.1/transforms/5f003fbae2b237e68896d64e16aacac4/transformed/compose-foundation-1.6.2/AndroidManifest.xml:25:13-37
+47-->[androidx.wear.compose:compose-foundation:1.6.2] /home/pc/.gradle/caches/9.4.1/transforms/a59fc18c1cea5dbc10c797bea14c6b16/transformed/compose-foundation-1.6.2/AndroidManifest.xml:25:13-37
 48
 49        <provider
-49-->[androidx.emoji2:emoji2:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/35b8839bf60c3a1658a87b868304d18f/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+49-->[androidx.emoji2:emoji2:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/c2d8939ab0abac196269ec3a54e01344/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
 50            android:name="androidx.startup.InitializationProvider"
-50-->[androidx.emoji2:emoji2:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/35b8839bf60c3a1658a87b868304d18f/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+50-->[androidx.emoji2:emoji2:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/c2d8939ab0abac196269ec3a54e01344/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
 51            android:authorities="com.oxi.calc.wear.androidx-startup"
-51-->[androidx.emoji2:emoji2:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/35b8839bf60c3a1658a87b868304d18f/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+51-->[androidx.emoji2:emoji2:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/c2d8939ab0abac196269ec3a54e01344/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
 52            android:exported="false" >
-52-->[androidx.emoji2:emoji2:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/35b8839bf60c3a1658a87b868304d18f/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+52-->[androidx.emoji2:emoji2:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/c2d8939ab0abac196269ec3a54e01344/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
 53            <meta-data
-53-->[androidx.emoji2:emoji2:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/35b8839bf60c3a1658a87b868304d18f/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+53-->[androidx.emoji2:emoji2:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/c2d8939ab0abac196269ec3a54e01344/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
 54                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-54-->[androidx.emoji2:emoji2:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/35b8839bf60c3a1658a87b868304d18f/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+54-->[androidx.emoji2:emoji2:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/c2d8939ab0abac196269ec3a54e01344/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
 55                android:value="androidx.startup" />
-55-->[androidx.emoji2:emoji2:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/35b8839bf60c3a1658a87b868304d18f/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+55-->[androidx.emoji2:emoji2:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/c2d8939ab0abac196269ec3a54e01344/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
 56            <meta-data
-56-->[androidx.lifecycle:lifecycle-process:2.9.4] /Users/mac/.gradle/caches/9.4.1/transforms/48629c0d064b052eb6f467b4e3a6b2cf/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:29:13-31:52
+56-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/pc/.gradle/caches/9.4.1/transforms/82ae82d74ff12c1bd4d4b9d24c41cf4b/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:29:13-31:52
 57                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-57-->[androidx.lifecycle:lifecycle-process:2.9.4] /Users/mac/.gradle/caches/9.4.1/transforms/48629c0d064b052eb6f467b4e3a6b2cf/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:30:17-78
+57-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/pc/.gradle/caches/9.4.1/transforms/82ae82d74ff12c1bd4d4b9d24c41cf4b/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:30:17-78
 58                android:value="androidx.startup" />
-58-->[androidx.lifecycle:lifecycle-process:2.9.4] /Users/mac/.gradle/caches/9.4.1/transforms/48629c0d064b052eb6f467b4e3a6b2cf/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:31:17-49
+58-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/pc/.gradle/caches/9.4.1/transforms/82ae82d74ff12c1bd4d4b9d24c41cf4b/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:31:17-49
 59            <meta-data
-59-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+59-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
 60                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-60-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+60-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
 61                android:value="androidx.startup" />
-61-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+61-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
 62        </provider>
 63
 64        <uses-library
-64-->[androidx.window:window:1.5.0] /Users/mac/.gradle/caches/9.4.1/transforms/833384324ed2807eea88bc15c4720bcd/transformed/window-1.5.0/AndroidManifest.xml:23:9-25:40
+64-->[androidx.window:window:1.5.0] /home/pc/.gradle/caches/9.4.1/transforms/c90755efa8ca0379f69c9f036adf38bb/transformed/window-1.5.0/AndroidManifest.xml:23:9-25:40
 65            android:name="androidx.window.extensions"
-65-->[androidx.window:window:1.5.0] /Users/mac/.gradle/caches/9.4.1/transforms/833384324ed2807eea88bc15c4720bcd/transformed/window-1.5.0/AndroidManifest.xml:24:13-54
+65-->[androidx.window:window:1.5.0] /home/pc/.gradle/caches/9.4.1/transforms/c90755efa8ca0379f69c9f036adf38bb/transformed/window-1.5.0/AndroidManifest.xml:24:13-54
 66            android:required="false" />
-66-->[androidx.window:window:1.5.0] /Users/mac/.gradle/caches/9.4.1/transforms/833384324ed2807eea88bc15c4720bcd/transformed/window-1.5.0/AndroidManifest.xml:25:13-37
+66-->[androidx.window:window:1.5.0] /home/pc/.gradle/caches/9.4.1/transforms/c90755efa8ca0379f69c9f036adf38bb/transformed/window-1.5.0/AndroidManifest.xml:25:13-37
 67        <uses-library
-67-->[androidx.window:window:1.5.0] /Users/mac/.gradle/caches/9.4.1/transforms/833384324ed2807eea88bc15c4720bcd/transformed/window-1.5.0/AndroidManifest.xml:26:9-28:40
+67-->[androidx.window:window:1.5.0] /home/pc/.gradle/caches/9.4.1/transforms/c90755efa8ca0379f69c9f036adf38bb/transformed/window-1.5.0/AndroidManifest.xml:26:9-28:40
 68            android:name="androidx.window.sidecar"
-68-->[androidx.window:window:1.5.0] /Users/mac/.gradle/caches/9.4.1/transforms/833384324ed2807eea88bc15c4720bcd/transformed/window-1.5.0/AndroidManifest.xml:27:13-51
+68-->[androidx.window:window:1.5.0] /home/pc/.gradle/caches/9.4.1/transforms/c90755efa8ca0379f69c9f036adf38bb/transformed/window-1.5.0/AndroidManifest.xml:27:13-51
 69            android:required="false" />
-69-->[androidx.window:window:1.5.0] /Users/mac/.gradle/caches/9.4.1/transforms/833384324ed2807eea88bc15c4720bcd/transformed/window-1.5.0/AndroidManifest.xml:28:13-37
+69-->[androidx.window:window:1.5.0] /home/pc/.gradle/caches/9.4.1/transforms/c90755efa8ca0379f69c9f036adf38bb/transformed/window-1.5.0/AndroidManifest.xml:28:13-37
 70
 71        <receiver
-71-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+71-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
 72            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-72-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+72-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
 73            android:directBootAware="false"
-73-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+73-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
 74            android:enabled="true"
-74-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+74-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
 75            android:exported="true"
-75-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+75-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
 76            android:permission="android.permission.DUMP" >
-76-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+76-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
 77            <intent-filter>
-77-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+77-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
 78                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-78-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-78-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+78-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+78-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
 79            </intent-filter>
 80            <intent-filter>
-80-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+80-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
 81                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+81-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+81-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
 82            </intent-filter>
 83            <intent-filter>
-83-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+83-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
 84                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+84-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+84-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
 85            </intent-filter>
 86            <intent-filter>
-86-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+86-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
 87                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-87-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-87-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mac/.gradle/caches/9.4.1/transforms/8cc19b944d398d8940a5b82be78741bd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+87-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+87-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/pc/.gradle/caches/9.4.1/transforms/acc375db68b357988d1cff4d62f4d177/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
 88            </intent-filter>
 89        </receiver>
 90    </application>

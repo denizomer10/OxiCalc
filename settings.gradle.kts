@@ -22,7 +22,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Application"
+rootProject.name = "OxiCalc"
 include(":app")
 include(":shared")
 include(":wear")
