@@ -23,6 +23,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "OxiCalc"
-include(":app")
-include(":shared")
-include(":wear")
+include(":composeApp")
