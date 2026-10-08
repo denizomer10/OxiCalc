@@ -52,21 +52,27 @@ import kotlin.math.roundToInt
 fun CalculatorScreen(viewModel: CalculatorViewModel = viewModel()) {
     val configuration = LocalConfiguration.current
     val isLandscape = configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+    // A real tablet is defined by its *smallest* width, so a landscape phone is not
+    // mistaken for a tablet (which would wrongly trigger the side-by-side layout).
+    val isTablet = configuration.smallestScreenWidthDp >= 600
     val isDarkMode = viewModel.isDarkMode
 
     val density = LocalDensity.current
     val isScientific = viewModel.isScientificMode
     val historyItems = viewModel.calculationHistory
-    
+
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-            // BoxWithConstraints is our brain for multi-device scaling
-            BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+            // BoxWithConstraints is our brain for multi-device scaling.
+            // Insets are applied once here so nothing hides under system bars, at any DPI.
+            BoxWithConstraints(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .windowInsetsPadding(WindowInsets.safeDrawing)
+            ) {
                 val screenHeight = maxHeight
-                val screenWidth = maxWidth
-                val isTablet = screenWidth > 600.dp
                 
                 // Side-by-side layout for tablets in landscape
                 if (isTablet && isLandscape) {
@@ -90,7 +96,6 @@ fun CalculatorScreen(viewModel: CalculatorViewModel = viewModel()) {
                             modifier = Modifier
                                 .weight(2f)
                                 .fillMaxHeight()
-                                .windowInsetsPadding(WindowInsets.safeDrawing)
                                 .padding(horizontal = 32.dp, vertical = 8.dp)
                         ) {
                             TopBar(
@@ -167,7 +172,6 @@ fun CalculatorScreen(viewModel: CalculatorViewModel = viewModel()) {
                                 .graphicsLayer { 
                                     translationY = animatedOffset 
                                 }
-                                .windowInsetsPadding(WindowInsets.safeDrawing)
                                 .padding(horizontal = 16.dp, vertical = 4.dp)
                         ) {
                             TopBar(
@@ -226,23 +230,16 @@ fun TopBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .height(if (isLandscape) 36.dp else 48.dp),
+            .height(if (isLandscape) 40.dp else 52.dp),
         horizontalArrangement = Arrangement.End,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Surface(
-            onClick = onThemeToggle,
-            shape = CircleShape,
-            color = if (isDarkMode) Color.White else Color.Black,
-            modifier = Modifier.size(if (isLandscape) 30.dp else 38.dp)
-        ) {
-            Box(contentAlignment = Alignment.Center) {
-                val icon = if (isDarkMode) "☀️" else "🌙"
-                val tint = if (isDarkMode) Color.Black else Color.White
-                Text(icon, fontSize = if (isLandscape) 14.sp else 18.sp, color = tint)
-            }
-        }
-        
+        ThemeToggleButton(
+            isDarkMode = isDarkMode,
+            buttonSize = if (isLandscape) 34.dp else 42.dp,
+            onToggle = onThemeToggle
+        )
+
         Spacer(modifier = Modifier.width(12.dp))
         
         Surface(
@@ -538,8 +535,7 @@ fun HistoryHandle(onDrag: (Float) -> Unit, onDragStopped: () -> Unit, onToggle: 
 fun IntegratedHistoryList(historyItems: List<HistoryItem>, onItemClick: (HistoryItem) -> Unit, onClear: () -> Unit) {
     val configuration = LocalConfiguration.current
     val isLandscape = configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
-    val screenWidth = configuration.screenWidthDp.dp
-    val isTablet = screenWidth > 600.dp
+    val isTablet = configuration.smallestScreenWidthDp >= 600
 
     // Dynamic scaling based on device and orientation
     val titleFontSize = when {
