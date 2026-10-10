@@ -6,6 +6,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.lifecycle.AndroidViewModel
@@ -18,6 +19,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.util.UUID
 
+@Immutable
 data class HistoryItem(
     val id: String = UUID.randomUUID().toString(),
     val expression: String,

@@ -7,21 +7,26 @@ All math runs in a stripped, LTO-optimized shared library behind a thin JNI brid
 stays entirely in Kotlin/Compose. The result is an exact-decimal calculator that is small, private,
 and pleasant to use on anything from a budget phone to a landscape tablet.
 
-| Dark | Light |
-| :--: | :---: |
-| ![OxiCalc in dark mode](docs/screenshot-dark.png) | ![OxiCalc in light mode](docs/screenshot-light.png) |
+| Dark | Light | Scientific |
+| :--: | :---: | :--------: |
+| ![OxiCalc in dark mode](docs/screenshot-dark.png) | ![OxiCalc in light mode](docs/screenshot-light.png) | ![OxiCalc scientific mode](docs/screenshot-scientific.png) |
 
 ---
 
 ## Features
 
-- **Exact decimal arithmetic** — powered by Rust's `rust_decimal`, so `0.1 + 0.2` is `0.3`, not `0.30000000000000004`.
+- **Exact decimal arithmetic** — powered by Rust's `rust_decimal`: `0.1 + 0.2` is `0.3`, and large integer
+  products such as `111111111 × 111111111` are returned in full, never as floating-point noise.
+- **Deep scientific engine** — `sin`, `cos`, `tan`, `asin`, `acos`, `atan` (degrees), `log`, `ln`, `exp`,
+  `10ˣ`, `√`, `∛`, `x²`, `xʸ`, `1/x`, `n!`, `|x|`, `mod`, `π`, `e` — rounded to 12 significant digits so
+  `sin(30°)` prints `0.5`, not `0.49999999999999994`.
+- **Robust error handling** — domain errors (`√-1`, `log 0`, `tan 90°`, `÷ 0`) report a localized *Error*
+  instead of garbage or a crash.
 - **Material You** — dynamic color adapts to the system theme on Android 12+, with a curated
   Water Blue fallback palette for older devices.
 - **Modern theme toggle** — a hand-drawn (Canvas) sun/moon control; no icon pack shipped.
 - **Adaptive layout** — a single codebase that reflows gracefully across portrait phones, landscape
   phones and tablets (side-by-side history), tested down to cramped, high-density screens.
-- **Scientific mode** — `sin`, `cos`, `tan`, `log`, `ln`, `sqrt`, `x²`, `xʸ`, `π`, `e`.
 - **Local history** — the last 100 calculations, stored on-device and restorable with one tap.
 - **8 languages** — English, Turkish, German, French, Spanish, Russian, Japanese and Arabic.
 - **Privacy first** — no network access, no analytics, no accounts. Everything stays on the device.
@@ -58,6 +63,20 @@ flowchart TD
 | Interop | JNI, per-ABI `.so` (`arm64-v8a`, `armeabi-v7a`, `x86_64`) |
 | Persistence | `SharedPreferences` (local history, theme) |
 | Build | Gradle (Kotlin DSL), AGP 9, `cargo-ndk` |
+
+---
+
+## Compatibility & performance
+
+- Runs on **Android 7.1 (API 25)** and up, from budget phones to tablets.
+- The UI keeps heavyweight dependencies out and the whole screen is a single Compose tree with
+  `graphicsLayer`-driven animations (no per-frame recomposition); history items and button models are
+  `@Immutable` so Compose can skip them.
+- The Rust core is a single stripped, LTO-optimized `.so` per ABI and is verified by unit tests:
+
+  ```bash
+  cd rust-core && cargo test
+  ```
 
 ---
 
@@ -115,6 +134,15 @@ echo "sdk.dir=$ANDROID_HOME" > local.properties
 
 The Rust core is built by the `cargoNdkBuild` Gradle task, which runs automatically before
 `preBuild` and drops the resulting `.so` files into the APK's `jniLibs`.
+
+### Tests
+
+The calculation engine has a Rust test suite covering exact arithmetic, rounding, domain errors and
+the scientific functions:
+
+```bash
+cd rust-core && cargo test
+```
 
 ---
 

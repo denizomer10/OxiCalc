@@ -419,12 +419,25 @@ fun LandscapeKeypad(viewModel: CalculatorViewModel) {
     }
 }
 
+@Immutable
+private data class SciButton(val label: String, val op: String, val isBinary: Boolean = false)
+
 @Composable
 fun ScientificPanel(viewModel: CalculatorViewModel, isLandscape: Boolean) {
     val sciButtons = remember {
         listOf(
-            listOf("sin", "cos", "tan", "log", "ln"),
-            listOf("sqrt", "sq", "pi", "e", "pow")
+            listOf(
+                SciButton("sin", "sin"), SciButton("cos", "cos"), SciButton("tan", "tan"),
+                SciButton("log", "log"), SciButton("ln", "ln")
+            ),
+            listOf(
+                SciButton("√", "sqrt"), SciButton("x²", "sq"), SciButton("xʸ", "pow", isBinary = true),
+                SciButton("1/x", "recip"), SciButton("n!", "fact")
+            ),
+            listOf(
+                SciButton("π", "pi"), SciButton("e", "e"), SciButton("10ˣ", "exp10"),
+                SciButton("|x|", "abs"), SciButton("mod", "mod", isBinary = true)
+            )
         )
     }
 
@@ -433,20 +446,20 @@ fun ScientificPanel(viewModel: CalculatorViewModel, isLandscape: Boolean) {
             sciButtons.forEach { row ->
                 Row(modifier = Modifier.weight(1f).fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     row.forEach { btn ->
-                        CalcButton(text = btn, modifier = Modifier.weight(1f), type = ButtonType.Scientific, isWide = true) {
-                            if (btn == "pow") viewModel.onOperationClick("pow") else viewModel.onScientificClick(btn)
+                        CalcButton(text = btn.label, modifier = Modifier.weight(1f), type = ButtonType.Scientific, isWide = true) {
+                            if (btn.isBinary) viewModel.onOperationClick(btn.op) else viewModel.onScientificClick(btn.op)
                         }
                     }
                 }
             }
         }
     } else {
-        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
             sciButtons.forEach { row ->
-                Row(modifier = Modifier.height(48.dp).fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Row(modifier = Modifier.height(44.dp).fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                     row.forEach { btn ->
-                        CalcButton(text = btn, modifier = Modifier.weight(1f), type = ButtonType.Scientific, isWide = false) {
-                            if (btn == "pow") viewModel.onOperationClick("pow") else viewModel.onScientificClick(btn)
+                        CalcButton(text = btn.label, modifier = Modifier.weight(1f), type = ButtonType.Scientific, isWide = false) {
+                            if (btn.isBinary) viewModel.onOperationClick(btn.op) else viewModel.onScientificClick(btn.op)
                         }
                     }
                 }
