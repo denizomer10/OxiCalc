@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OxiCalc</string>
+    <string name="history">履歴</string>
+    <string name="clear">クリア</string>
+    <string name="clear_history">履歴をクリア</string>
+    <string name="scientific">関数</string>
+    <string name="settings">設定</string>
+    <string name="back">戻る</string>
+    <string name="back_to_calculator">電卓に戻る</string>
+    <string name="light_mode">ライトモード</string>
+    <string name="dark_mode">ダークモード</string>
+    <string name="menu">メニュー</string>
+    <string name="close">閉じる</string>
+    <string name="scientific_mode">fx</string>
+    <string name="standard_mode">123</string>
+    <string name="error">エラー</string>
+</resources>

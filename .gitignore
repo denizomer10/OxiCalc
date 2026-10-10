@@ -14,3 +14,6 @@ build/
 .cxx
 local.properties
 .kotlin/
+
+# Rust
+rust-core/target/

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OxiCalc</string>
+    <string name="history">Historial</string>
+    <string name="clear">Borrar</string>
+    <string name="clear_history">Borrar historial</string>
+    <string name="scientific">Científico</string>
+    <string name="settings">Ajustes</string>
+    <string name="back">Atrás</string>
+    <string name="back_to_calculator">Volver a la calculadora</string>
+    <string name="light_mode">Modo claro</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="menu">Menú</string>
+    <string name="close">Cerrar</string>
+    <string name="scientific_mode">fx</string>
+    <string name="standard_mode">123</string>
+    <string name="error">Error</string>
+</resources>

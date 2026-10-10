@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OxiCalc</string>
+    <string name="history">Geçmiş</string>
+    <string name="clear">Temizle</string>
+    <string name="clear_history">Geçmişi Temizle</string>
+    <string name="scientific">Bilimsel</string>
+    <string name="settings">Ayarlar</string>
+    <string name="back">Geri</string>
+    <string name="back_to_calculator">Geri Dön</string>
+    <string name="light_mode">Aydınlık Mod</string>
+    <string name="dark_mode">Karanlık Mod</string>
+    <string name="menu">Menü</string>
+    <string name="close">Kapat</string>
+    <string name="scientific_mode">fx</string>
+    <string name="standard_mode">123</string>
+    <string name="error">Hata</string>
+</resources>

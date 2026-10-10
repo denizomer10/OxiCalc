@@ -1,0 +1,19 @@
+[package]
+name = "oxicalc_core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "oxicalc_core"
+crate-type = ["cdylib"]
+
+[dependencies]
+jni = "0.21"
+rust_decimal = { version = "1", features = ["maths"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

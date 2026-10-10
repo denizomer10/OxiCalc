@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OxiCalc</string>
+    <string name="history">السجل</string>
+    <string name="clear">مسح</string>
+    <string name="clear_history">مسح السجل</string>
+    <string name="scientific">علمي</string>
+    <string name="settings">الإعدادات</string>
+    <string name="back">رجوع</string>
+    <string name="back_to_calculator">العودة إلى الحاسبة</string>
+    <string name="light_mode">الوضع الفاتح</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="menu">القائمة</string>
+    <string name="close">إغلاق</string>
+    <string name="scientific_mode">fx</string>
+    <string name="standard_mode">123</string>
+    <string name="error">خطأ</string>
+</resources>
